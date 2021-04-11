@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AppFarmaciaDSM</string>
+    <string name="app_name">Farmacia Móvil</string>
+    <string name="login_options">¿No tienes una cuenta?<br/>Regístrate o ingresa con Google</string>
 </resources>
