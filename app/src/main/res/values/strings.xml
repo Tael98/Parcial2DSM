@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Farmacia Móvil</string>
 
-    <string name="login_options">¿No tienes una cuenta? <br />Regístrate o ingresa con Google</string>
+    <string name="login_options">¿No tienes una cuenta?</string>
     <string name="placeholder_user">Correo electrónico</string>
     <string name="placeholder_pass">Contraseña</string>
 
