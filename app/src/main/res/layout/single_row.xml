@@ -24,15 +24,15 @@
             />
 
         <TextView
+            android:id="@+id/nameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/nameText"
-            android:text="Placeholder Name"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:textColor="#000"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
-            android:layout_marginLeft="10dp"/>
+            android:text="Placeholder Name"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/priceText"
@@ -41,19 +41,20 @@
             android:layout_below="@id/nameText"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
+            android:fontFamily="@font/coda"
             android:text="Placeholder Price"
             android:textColor="#000"
-            android:textSize="25sp" />
+            android:textSize="24sp" />
 
 
         <Button
             android:id="@+id/btnAñadir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Añadir"
             android:layout_below="@id/priceText"
             android:layout_alignLeft="@id/priceText"
-            />
+            android:backgroundTint="#096bdb"
+            android:text="@string/btn_añadir" />
 
         <Button
             android:id="@+id/btnQuitar"
@@ -61,16 +62,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/priceText"
             android:layout_marginLeft="195dp"
-            android:text="Quitar" />
+            android:backgroundTint="#096bdb"
+            android:text="@string/btn_quitar" />
 
         <TextView
-            android:id="@+id/txtCantidad"
+            android:id="@+id/cantidadText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/btnQuitar"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@id/btnQuitar"
-            android:text="TextView"
+            android:text="0"
             android:textSize="18sp"
             android:textStyle="bold"
             tools:text="0" />

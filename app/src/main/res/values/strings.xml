@@ -9,5 +9,7 @@
     <string name="btn_signUp">Registrarse</string>
     <string name="btn_google">Ingresar con Google</string>
     <string name="btn_logOff">Cerrar sesión</string>
-
+    <string name="btn_comprar">Realizar compra</string>
+    <string name="btn_añadir">Añadir</string>
+    <string name="btn_quitar">Quitar</string>
 </resources>
