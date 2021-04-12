@@ -7,21 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.List;
+import sv.edu.udb.appfarmaciadsm.datos.Medicina;
+import sv.edu.udb.appfarmaciadsm.datos.medAdapter;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -49,6 +43,11 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.btnComprar).setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {   Buy();  }
+        });
+
+        findViewById(R.id.floatingBtn).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {   History();  }
         });
 
         recView = findViewById(R.id.rcView);
@@ -89,4 +88,12 @@ public class HomeActivity extends AppCompatActivity {
         }
         else Toast.makeText(getApplicationContext(), "Ingrese un total válido.", Toast.LENGTH_LONG).show();
     }
+
+    private void History()
+    {
+        Intent intent = new Intent(HomeActivity.this, HistoryActivity.class);
+        startActivity(intent);
+    }
+
+
 }

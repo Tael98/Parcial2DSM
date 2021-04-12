@@ -10,8 +10,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import sv.edu.udb.appfarmaciadsm.datos.Compra;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -20,6 +28,8 @@ public class OrderActivity extends AppCompatActivity {
 
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refOrden = database.getReference("ordenes");
+    Date currentTime = Calendar.getInstance().getTime();
+    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +66,10 @@ public class OrderActivity extends AppCompatActivity {
         ad.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id)
             {
-                refOrden.push().setValue(HomeActivity.total);
+                dateFormat.setTimeZone(TimeZone.getTimeZone("GMT-6"));
+                String fecha = dateFormat.format(currentTime);
+                Compra orden = new Compra(fecha, HomeActivity.total);
+                refOrden.push().setValue(orden);
                 Toast.makeText(OrderActivity.this,"¡Orden registrada!",Toast.LENGTH_SHORT).show();
                 HomeActivity.total = 0;
                 Intent intent = new Intent(OrderActivity.this, HomeActivity.class);

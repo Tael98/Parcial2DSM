@@ -1,4 +1,4 @@
-package sv.edu.udb.appfarmaciadsm;
+package sv.edu.udb.appfarmaciadsm.datos;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +14,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import sv.edu.udb.appfarmaciadsm.HomeActivity;
+import sv.edu.udb.appfarmaciadsm.R;
 
 public class medAdapter extends FirebaseRecyclerAdapter<Medicina, medAdapter.medViewHolder>
 {
@@ -50,7 +52,7 @@ public class medAdapter extends FirebaseRecyclerAdapter<Medicina, medAdapter.med
     @Override
     public medViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_row,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.medicina_row,parent,false);
         return new medViewHolder(view);
     }
 

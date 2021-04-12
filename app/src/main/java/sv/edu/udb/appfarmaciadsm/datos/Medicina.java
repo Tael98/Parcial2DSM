@@ -1,4 +1,4 @@
-package sv.edu.udb.appfarmaciadsm;
+package sv.edu.udb.appfarmaciadsm.datos;
 
 public class Medicina {
     public String nombre;
