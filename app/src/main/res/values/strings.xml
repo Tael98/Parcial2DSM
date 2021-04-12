@@ -12,4 +12,5 @@
     <string name="btn_comprar">Realizar compra</string>
     <string name="btn_añadir">Añadir</string>
     <string name="btn_quitar">Quitar</string>
+    <string name="btn_confirm">Confirmar orden</string>
 </resources>
